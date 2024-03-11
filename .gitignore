@@ -33,3 +33,4 @@
 
 # Personally added ones
 *.nvim
+build
