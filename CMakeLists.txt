@@ -4,10 +4,12 @@ project(RogueLike LANGUAGES CXX)
 
 set(HEADER_FILES
     src/include/main.hpp
+    src/include/renderer.hpp
     )
 
 set(SOURCE_FILES
     src/main.cpp
+    src/renderer.cpp
     )
 
 set(BUILD_SHARED_LIBS OFF)

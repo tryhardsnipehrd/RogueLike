@@ -1,21 +1,24 @@
 #include "include/main.hpp"
 
 int main() {
-    sf::Window GameWindow;
-    GameWindow.create( sf::VideoMode( 1920, 1080 ), "Roguelike" );
-    
-    while ( GameWindow.isOpen() )
+
+    GameData Settings;
+    Settings.GameWindow.create(sf::VideoMode(1920, 1080), "RogueLike" );
+
+    while ( Settings.GameWindow.isOpen() )
     {
         sf::Event event;
-        while ( GameWindow.pollEvent( event ) )
+        while ( Settings.GameWindow.pollEvent( event ) )
         {
             if ( event.type == sf::Event::Closed )
             {
-                GameWindow.close();
+                Settings.GameWindow.close();
             }
         }
+
+       RenderScreen(Settings); 
     }
 
     return 0;
 
-};
+}; 
