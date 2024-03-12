@@ -1,6 +1,5 @@
 #pragma once
 
-#include <iostream>
-
+#include <SFML/Window.hpp>
 
 using namespace std;
