@@ -5,6 +5,11 @@ int main() {
     GameData Settings;
     Settings.GameWindow.create(sf::VideoMode(1920, 1080), "RogueLike" );
 
+    if ( !Settings.GameFont.loadFromFile("GameFont.ttf") ) 
+    {
+        return 1;
+    }
+
     while ( Settings.GameWindow.isOpen() )
     {
         sf::Event event;

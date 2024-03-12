@@ -34,4 +34,5 @@ add_custom_command(
     TARGET RogueLike
     POST_BUILD
     COMMAND $<TARGET_FILE:RogueLike>
+    WORKING_DIRECTORY $<TARGET_FILE_DIR:RogueLike>
     VERBATIM)
