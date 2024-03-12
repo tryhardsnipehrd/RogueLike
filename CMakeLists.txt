@@ -27,3 +27,9 @@ target_link_libraries(RogueLike PRIVATE sfml-graphics)
 target_compile_features(RogueLike PRIVATE cxx_std_17)
 
 install(TARGETS RogueLike)
+
+add_custom_command(
+    TARGET RogueLike
+    POST_BUILD
+    COMMAND $<TARGET_FILE:RogueLike>
+    VERBATIM)
