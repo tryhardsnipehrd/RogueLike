@@ -6,3 +6,5 @@
 #include "gameSettings.hpp"
 
 using namespace std;
+
+void HandleInput(GameData& Settings, sf::Event::KeyEvent key);
