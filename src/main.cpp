@@ -5,7 +5,7 @@ int main() {
     GameData Settings;
     Settings.GameWindow.create(sf::VideoMode(1920, 1080), "RogueLike" );
     
-    Settings.Game.player.SetPosition(50, 50);
+    Settings.Game.player.SetPosition(0, 0);
 
     if ( !Settings.GameFont.loadFromFile("GameFont.ttf") ) 
     {
@@ -43,12 +43,19 @@ void HandleInput(GameData& Settings, sf::Event::KeyEvent key)
     switch ( key.code )
     {
         case sf::Keyboard::Right:
-            Settings.Game.player.SetPosition( PlayerX + 50, PlayerY );
+            Settings.Game.player.SetPosition( PlayerX + 1, PlayerY );
             break;
 
         case sf::Keyboard::Left:
-            Settings.Game.player.SetPosition( PlayerX - 50, PlayerY );
+            Settings.Game.player.SetPosition( PlayerX - 1, PlayerY );
             break;
+
+        case sf::Keyboard::Up:
+            Settings.Game.player.SetPosition( PlayerX, PlayerY - 1 );
+            break;
+
+        case sf::Keyboard::Down:
+            Settings.Game.player.SetPosition( PlayerX, PlayerY + 1 );
 
         default:
             break;
